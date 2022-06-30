@@ -1,0 +1,8 @@
+steps:
+  - pipe-gen:
+      type: group/infra-deploy
+      args:
+        account_name: development
+        plan_if: 'build.branch != pipeline.default_branch'
+        apply_if: 'build.branch == pipeline.default_branch'
+
